@@ -12,7 +12,6 @@
 @prefix grp: <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/cityobjectgroup#> .
 @prefix iso19109: <http://def.isotc211.org/iso19109/2015/GeneralFeatureModel#> .
 @prefix iso19111-2019: <http://def.isotc211.org/iso19111/2019/CoordinateReferenceSystems#> .
-@prefix iso19150-2: <http://def.isotc211.org/iso19150/-2/2012/base#> .
 @prefix luse: <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/landuse#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
