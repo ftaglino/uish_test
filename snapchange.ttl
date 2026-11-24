@@ -2,7 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-<!-- @prefix iso19150-2: <http://def.isotc211.org/iso19150-2/2012/base#> . -->
+# @prefix iso19150-2: <http://def.isotc211.org/iso19150-2/2012/base#> .
 
 <http://shapechange.net/resources/ont/base>
   a owl:Ontology ;
@@ -18,7 +18,7 @@
 
 <http://shapechange.net/resources/ont/base#Sign>
   a rdfs:Datatype ;
-<!--  iso19150-2:isEnumeration true ; -->
+#  iso19150-2:isEnumeration true ;
   owl:oneOf (
    <http://shapechange.net/resources/ont/base#+>
    <http://shapechange.net/resources/ont/base#->
