@@ -7,34 +7,34 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core">
     <Prefix name="sc" IRI="http://shapechange.net/resources/ont/base#"/>
-    <Prefix name="app" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/appearance#"/> 
-    <Prefix name="con" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/construction#"/>
-    <Prefix name="dem" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/relief#"/>
-    <Prefix name="doc" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/Document/3.0/document#"/>
-    <Prefix name="dyn" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/dynamizer#"/>
-    <Prefix name="frn" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/cityfurniture#"/>
-    <Prefix name="gen" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/generics#"/>
-    <Prefix name="grp" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/cityobjectgroup#"/>
+<!--    <Prefix name="app" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/appearance#"/> -->
+<!--    <Prefix name="con" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/construction#"/> -->
+<!--    <Prefix name="dem" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/relief#"/> -->
+<!--    <Prefix name="doc" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/Document/3.0/document#"/> -->
+<!--    <Prefix name="dyn" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/dynamizer#"/> -->
+<!--    <Prefix name="frn" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/cityfurniture#"/> -->
+<!--    <Prefix name="gen" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/generics#"/> -->
+<!--    <Prefix name="grp" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/cityobjectgroup#"/> -->
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="tun" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/tunnel#"/>
-    <Prefix name="veg" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/vegetation#"/>
-    <Prefix name="wtr" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/waterbody#"/>
+<!--    <Prefix name="tun" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/tunnel#"/> -->
+<!--    <Prefix name="veg" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/vegetation#"/> -->
+<!--    <Prefix name="wtr" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/waterbody#"/> -->
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="bldg" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/building#"/>
-    <Prefix name="brid" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/bridge#"/>
+<!--    <Prefix name="brid" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/bridge#"/> -->
     <Prefix name="core" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core#"/>
-    <Prefix name="luse" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/landuse#"/>
+<!--    <Prefix name="luse" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/landuse#"/> -->
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
-    <Prefix name="tran" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/transportation#"/>
-    <Prefix name="wksp" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/Workspace/3.0/workspace#"/>
+<!--    <Prefix name="tran" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/transportation#"/> -->
+<!--    <Prefix name="wksp" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/Workspace/3.0/workspace#"/> -->
     <Prefix name="gmlowl" IRI="http://www.opengis.net/ont/gml#"/>
     <Prefix name="iso19109" IRI="http://def.isotc211.org/iso19109/2015/GeneralFeatureModel#"/>
     <Prefix name="iso19150-2" IRI="http://def.isotc211.org/iso19150/-2/2012/base#"/>
     <Prefix name="iso19111-2019" IRI="http://def.isotc211.org/iso19111/2019/CoordinateReferenceSystems#"/>
-    <!-- <Import>http://def.isotc211.org/iso19150/-2/2012/base</Import>
+    <Import>http://def.isotc211.org/iso19150/-2/2012/base</Import>
     <Import>http://shapechange.net/resources/ont/base</Import>
     <Import>http://www.opengis.net/ont/gml</Import>
 <!--    <Import>https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/appearance</Import> -->
