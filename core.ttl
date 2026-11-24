@@ -7,7 +7,6 @@ xml:base="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontolog
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 ontologyIRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core">
 
-   
 </Ontology>
 
 
