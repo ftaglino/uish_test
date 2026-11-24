@@ -1,13 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-<!--     xml:base="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core" -->
-     xml:base="https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/core"
+xml:base="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-<!-- ***     ontologyIRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core"> -->
-ontologyIRI="https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/core">
+ontologyIRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core">
 
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
