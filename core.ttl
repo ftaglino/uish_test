@@ -34,7 +34,7 @@
         <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/construction.ttl>,
         <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/building.ttl>,
         <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/bridge.ttl>,
-        <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/tunnel.ttl>.
+        <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/tunnel.ttl>;
     skos:definition "The Core module defines the basic components of the CityGML conceptual model. This includes abstract base classes that define the core properties of more specialized thematic classes defined in other modules as well as concrete classes that are common to other modules, for example basic data types."@en .
 
 core:IntegerBetween0and3 a owl:Class ;
