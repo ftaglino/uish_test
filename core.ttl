@@ -8,7 +8,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 <!-- ***     ontologyIRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core"> -->
 ontologyIRI="https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/core">
-    <Prefix name="sc" IRI="http://shapechange.net/resources/ont/base#"/>
+<!--    <Prefix name="sc" IRI="http://shapechange.net/resources/ont/base#"/> -->
+    <Prefix name="sc" IRI="https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/snapchange#"/>
 <!--    <Prefix name="app" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/appearance#"/> -->
 <!--    <Prefix name="con" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/construction#"/> -->
 <!--    <Prefix name="dem" IRI="https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/relief#"/> -->
