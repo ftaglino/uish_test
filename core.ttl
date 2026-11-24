@@ -28,8 +28,9 @@
 
 <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core> a owl:Ontology ;
     rdfs:label "Core"@en ;
-    owl:imports <http://def.isotc211.org/iso19150/-2/2012/base>,
-        <http://shapechange.net/resources/ont/base>,
+    owl:imports 
+ #       <http://def.isotc211.org/iso19150/-2/2012/base>,
+        <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/snapchange.ttl>,
         <http://www.opengis.net/ont/gml>,
         <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/appearance.ttl>,
         <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/bridge.ttl>,
