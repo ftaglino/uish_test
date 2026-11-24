@@ -1,377 +1,398 @@
+@prefix brid: <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/bridge#> .
 @prefix con: <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/construction#> .
 @prefix core: <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core#> .
 @prefix iso19150-2: <http://def.isotc211.org/iso19150/-2/2012/base#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tun: <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/tunnel#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/tunnel> a owl:Ontology ;
-    rdfs:label "Tunnel"@en ;
-    owl:imports 
-        <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/construction.ttl>,
+<https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/bridge> a owl:Ontology ;
+    rdfs:label "Bridge"@en ;
+    owl:imports <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/construction.ttl>,
         <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core.ttl> ;
-    skos:definition "The Tunnel module supports representation of thematic and spatial aspects of tunnels, tunnel parts, tunnel installations, and interior tunnel structures."@en .
+    skos:definition "The Bridge module supports representation of thematic and spatial aspects of bridges, bridge parts, bridge installations, and interior bridge structures."@en .
 
-tun:AbstractTunnel.adeOfAbstractTunnel a owl:ObjectProperty ;
-    rdfs:label "adeOfAbstractTunnel"@en ;
-    rdfs:domain tun:AbstractTunnel ;
-    rdfs:range tun:ADEOfAbstractTunnel ;
-    skos:definition "Augments AbstractTunnel with properties defined in an ADE."@en .
+brid:AbstractBridge.address a owl:ObjectProperty ;
+    rdfs:label "address"@en ;
+    rdfs:domain brid:AbstractBridge ;
+    rdfs:range core:Address ;
+    skos:definition "Relates the addresses to the Bridge or BridgePart."@en .
 
-tun:AbstractTunnel.function a owl:ObjectProperty ;
+brid:AbstractBridge.adeOfAbstractBridge a owl:ObjectProperty ;
+    rdfs:label "adeOfAbstractBridge"@en ;
+    rdfs:domain brid:AbstractBridge ;
+    rdfs:range brid:ADEOfAbstractBridge ;
+    skos:definition "Augments AbstractBridge with properties defined in an ADE."@en .
+
+brid:AbstractBridge.bridgeConstructiveElement a owl:ObjectProperty ;
+    rdfs:label "bridgeConstructiveElement"@en ;
+    rdfs:domain brid:AbstractBridge ;
+    rdfs:range brid:BridgeConstructiveElement ;
+    skos:definition "Relates the constructive elements to the Bridge or BridgePart."@en .
+
+brid:AbstractBridge.bridgeFurniture a owl:ObjectProperty ;
+    rdfs:label "bridgeFurniture"@en ;
+    rdfs:domain brid:AbstractBridge ;
+    rdfs:range brid:BridgeFurniture ;
+    skos:definition "Relates the furniture objects to the Bridge or BridgePart."@en .
+
+brid:AbstractBridge.bridgeInstallation a owl:ObjectProperty ;
+    rdfs:label "bridgeInstallation"@en ;
+    rdfs:domain brid:AbstractBridge ;
+    rdfs:range brid:BridgeInstallation ;
+    skos:definition "Relates the installation objects to the Bridge or BridgePart."@en .
+
+brid:AbstractBridge.bridgeRoom a owl:ObjectProperty ;
+    rdfs:label "bridgeRoom"@en ;
+    rdfs:domain brid:AbstractBridge ;
+    rdfs:range brid:BridgeRoom ;
+    skos:definition "Relates the rooms to the Bridge or BridgePart."@en .
+
+brid:AbstractBridge.function a owl:ObjectProperty ;
     rdfs:label "function"@en ;
-    rdfs:domain tun:AbstractTunnel ;
+    rdfs:domain brid:AbstractBridge ;
     rdfs:range owl:Class ;
-    skos:definition "Specifies the intended purposes of the Tunnel or TunnelPart."@en .
+    skos:definition "Specifies the intended purposes of the Bridge or BridgePart."@en .
 
-tun:AbstractTunnel.hollowSpace a owl:ObjectProperty ;
-    rdfs:label "hollowSpace"@en ;
-    rdfs:domain tun:AbstractTunnel ;
-    rdfs:range tun:HollowSpace ;
-    skos:definition "Relates the hollow spaces to the Tunnel or TunnelPart."@en .
-
-tun:AbstractTunnel.tunnelConstructiveElement a owl:ObjectProperty ;
-    rdfs:label "tunnelConstructiveElement"@en ;
-    rdfs:domain tun:AbstractTunnel ;
-    rdfs:range tun:TunnelConstructiveElement ;
-    skos:definition "Relates the constructive elements to the Tunnel or TunnelPart."@en .
-
-tun:AbstractTunnel.tunnelFurniture a owl:ObjectProperty ;
-    rdfs:label "tunnelFurniture"@en ;
-    rdfs:domain tun:AbstractTunnel ;
-    rdfs:range tun:TunnelFurniture ;
-    skos:definition "Relates the furniture objects to the Tunnel or TunnelPart."@en .
-
-tun:AbstractTunnel.tunnelInstallation a owl:ObjectProperty ;
-    rdfs:label "tunnelInstallation"@en ;
-    rdfs:domain tun:AbstractTunnel ;
-    rdfs:range tun:TunnelInstallation ;
-    skos:definition "Relates the installation objects to the Tunnel or TunnelPart."@en .
-
-tun:AbstractTunnel.usage a owl:ObjectProperty ;
+brid:AbstractBridge.usage a owl:ObjectProperty ;
     rdfs:label "usage"@en ;
-    rdfs:domain tun:AbstractTunnel ;
+    rdfs:domain brid:AbstractBridge ;
     rdfs:range owl:Class ;
-    skos:definition "Specifies the actual uses of the Tunnel or TunnelPart."@en .
+    skos:definition "Specifies the actual uses of the Bridge or BridgePart."@en .
 
-tun:HollowSpace.adeOfHollowSpace a owl:ObjectProperty ;
-    rdfs:label "adeOfHollowSpace"@en ;
-    rdfs:domain tun:HollowSpace ;
-    rdfs:range tun:ADEOfHollowSpace ;
-    skos:definition "Augments the HollowSpace with properties defined in an ADE."@en .
+brid:Bridge.adeOfBridge a owl:ObjectProperty ;
+    rdfs:label "adeOfBridge"@en ;
+    rdfs:domain brid:Bridge ;
+    rdfs:range brid:ADEOfBridge ;
+    skos:definition "Augments the Bridge with properties defined in an ADE."@en .
 
-tun:HollowSpace.boundary a owl:ObjectProperty ;
+brid:Bridge.bridgePart a owl:ObjectProperty ;
+    rdfs:label "bridgePart"@en ;
+    rdfs:domain brid:Bridge ;
+    rdfs:range brid:BridgePart ;
+    skos:definition "Relates the bridge parts to the Bridge."@en .
+
+brid:BridgeConstructiveElement.adeOfBridgeConstructiveElement a owl:ObjectProperty ;
+    rdfs:label "adeOfBridgeConstructiveElement"@en ;
+    rdfs:domain brid:BridgeConstructiveElement ;
+    rdfs:range brid:ADEOfBridgeConstructiveElement ;
+    skos:definition "Augments the BridgeConstructiveElement with properties defined in an ADE."@en .
+
+brid:BridgeConstructiveElement.function a owl:ObjectProperty ;
+    rdfs:label "function"@en ;
+    rdfs:domain brid:BridgeConstructiveElement ;
+    rdfs:range owl:Class ;
+    skos:definition "Specifies the intended purposes of the BridgeConstructiveElement."@en .
+
+brid:BridgeConstructiveElement.usage a owl:ObjectProperty ;
+    rdfs:label "usage"@en ;
+    rdfs:domain brid:BridgeConstructiveElement ;
+    rdfs:range owl:Class ;
+    skos:definition "Specifies the actual uses of the BridgeConstructiveElement."@en .
+
+brid:BridgeFurniture.adeOfBridgeFurniture a owl:ObjectProperty ;
+    rdfs:label "adeOfBridgeFurniture"@en ;
+    rdfs:domain brid:BridgeFurniture ;
+    rdfs:range brid:ADEOfBridgeFurniture ;
+    skos:definition "Augments the BridgeFurniture with properties defined in an ADE."@en .
+
+brid:BridgeFurniture.function a owl:ObjectProperty ;
+    rdfs:label "function"@en ;
+    rdfs:domain brid:BridgeFurniture ;
+    rdfs:range owl:Class ;
+    skos:definition "Specifies the intended purposes of the BridgeFurniture."@en .
+
+brid:BridgeFurniture.usage a owl:ObjectProperty ;
+    rdfs:label "usage"@en ;
+    rdfs:domain brid:BridgeFurniture ;
+    rdfs:range owl:Class ;
+    skos:definition "Specifies the actual uses of the BridgeFurniture."@en .
+
+brid:BridgeInstallation.adeOfBridgeInstallation a owl:ObjectProperty ;
+    rdfs:label "adeOfBridgeInstallation"@en ;
+    rdfs:domain brid:BridgeInstallation ;
+    rdfs:range brid:ADEOfBridgeInstallation ;
+    skos:definition "Augments the BridgeInstallation with properties defined in an ADE."@en .
+
+brid:BridgeInstallation.function a owl:ObjectProperty ;
+    rdfs:label "function"@en ;
+    rdfs:domain brid:BridgeInstallation ;
+    rdfs:range owl:Class ;
+    skos:definition "Specifies the intended purposes of the BridgeInstallation."@en .
+
+brid:BridgeInstallation.usage a owl:ObjectProperty ;
+    rdfs:label "usage"@en ;
+    rdfs:domain brid:BridgeInstallation ;
+    rdfs:range owl:Class ;
+    skos:definition "Specifies the actual uses of the BridgeInstallation."@en .
+
+brid:BridgePart.adeOfBridgePart a owl:ObjectProperty ;
+    rdfs:label "adeOfBridgePart"@en ;
+    rdfs:domain brid:BridgePart ;
+    rdfs:range brid:ADEOfBridgePart ;
+    skos:definition "Augments the BridgePart with properties defined in an ADE."@en .
+
+brid:BridgeRoom.adeOfBridgeRoom a owl:ObjectProperty ;
+    rdfs:label "adeOfBridgeRoom"@en ;
+    rdfs:domain brid:BridgeRoom ;
+    rdfs:range brid:ADEOfBridgeRoom ;
+    skos:definition "Augments the BridgeRoom with properties defined in an ADE."@en .
+
+brid:BridgeRoom.boundary a owl:ObjectProperty ;
     rdfs:label "boundary"@en ;
-    rdfs:domain tun:HollowSpace ;
+    rdfs:domain brid:BridgeRoom ;
     rdfs:range core:AbstractThematicSurface ;
-    skos:definition "Relates to the surfaces that bound the HollowSpace. This relation is inherited from the Core module."@en .
+    skos:definition "Relates to the surfaces that bound the BridgeRoom. This relation is inherited from the Core module."@en .
 
-tun:HollowSpace.function a owl:ObjectProperty ;
+brid:BridgeRoom.bridgeFurniture a owl:ObjectProperty ;
+    rdfs:label "bridgeFurniture"@en ;
+    rdfs:domain brid:BridgeRoom ;
+    rdfs:range brid:BridgeFurniture ;
+    skos:definition "Relates the furniture objects to the BridgeRoom."@en .
+
+brid:BridgeRoom.bridgeInstallation a owl:ObjectProperty ;
+    rdfs:label "bridgeInstallation"@en ;
+    rdfs:domain brid:BridgeRoom ;
+    rdfs:range brid:BridgeInstallation ;
+    skos:definition "Relates to the installation objects to the BridgeRoom."@en .
+
+brid:BridgeRoom.function a owl:ObjectProperty ;
     rdfs:label "function"@en ;
-    rdfs:domain tun:HollowSpace ;
+    rdfs:domain brid:BridgeRoom ;
     rdfs:range owl:Class ;
-    skos:definition "Specifies the intended purposes of the HollowSpace."@en .
+    skos:definition "Specifies the intended purposes of the BridgeRoom."@en .
 
-tun:HollowSpace.tunnelFurniture a owl:ObjectProperty ;
-    rdfs:label "tunnelFurniture"@en ;
-    rdfs:domain tun:HollowSpace ;
-    rdfs:range tun:TunnelFurniture ;
-    skos:definition "Relates the furniture objects to the HollowSpace."@en .
-
-tun:HollowSpace.tunnelInstallation a owl:ObjectProperty ;
-    rdfs:label "tunnelInstallation"@en ;
-    rdfs:domain tun:HollowSpace ;
-    rdfs:range tun:TunnelInstallation ;
-    skos:definition "Relates the installation objects to the HollowSpace."@en .
-
-tun:HollowSpace.usage a owl:ObjectProperty ;
+brid:BridgeRoom.usage a owl:ObjectProperty ;
     rdfs:label "usage"@en ;
-    rdfs:domain tun:HollowSpace ;
+    rdfs:domain brid:BridgeRoom ;
     rdfs:range owl:Class ;
-    skos:definition "Specifies the actual uses of the HollowSpace."@en .
+    skos:definition "Specifies the actual uses of the BridgeRoom."@en .
 
-tun:Tunnel.adeOfTunnel a owl:ObjectProperty ;
-    rdfs:label "adeOfTunnel"@en ;
-    rdfs:domain tun:Tunnel ;
-    rdfs:range tun:ADEOfTunnel ;
-    skos:definition "Augments the Tunnel with properties defined in an ADE."@en .
-
-tun:Tunnel.tunnelPart a owl:ObjectProperty ;
-    rdfs:label "tunnelPart"@en ;
-    rdfs:domain tun:Tunnel ;
-    rdfs:range tun:TunnelPart ;
-    skos:definition "Relates the tunnel parts to the Tunnel."@en .
-
-tun:TunnelConstructiveElement.adeOfTunnelConstructiveElement a owl:ObjectProperty ;
-    rdfs:label "adeOfTunnelConstructiveElement"@en ;
-    rdfs:domain tun:TunnelConstructiveElement ;
-    rdfs:range tun:ADEOfTunnelConstructiveElement ;
-    skos:definition "Augments the TunnelConstructiveElement with properties defined in an ADE."@en .
-
-tun:TunnelConstructiveElement.function a owl:ObjectProperty ;
-    rdfs:label "function"@en ;
-    rdfs:domain tun:TunnelConstructiveElement ;
-    rdfs:range owl:Class ;
-    skos:definition "Specifies the intended purposes of the TunnelConstructiveElement."@en .
-
-tun:TunnelConstructiveElement.usage a owl:ObjectProperty ;
-    rdfs:label "usage"@en ;
-    rdfs:domain tun:TunnelConstructiveElement ;
-    rdfs:range owl:Class ;
-    skos:definition "Specifies the actual uses of the TunnelConstructiveElement."@en .
-
-tun:TunnelFurniture.adeOfTunnelFurniture a owl:ObjectProperty ;
-    rdfs:label "adeOfTunnelFurniture"@en ;
-    rdfs:domain tun:TunnelFurniture ;
-    rdfs:range tun:ADEOfTunnelFurniture ;
-    skos:definition "Augments the TunnelFurniture with properties defined in an ADE."@en .
-
-tun:TunnelFurniture.function a owl:ObjectProperty ;
-    rdfs:label "function"@en ;
-    rdfs:domain tun:TunnelFurniture ;
-    rdfs:range owl:Class ;
-    skos:definition "Specifies the intended purposes of the TunnelFurniture."@en .
-
-tun:TunnelFurniture.usage a owl:ObjectProperty ;
-    rdfs:label "usage"@en ;
-    rdfs:domain tun:TunnelFurniture ;
-    rdfs:range owl:Class ;
-    skos:definition "Specifies the actual uses of the TunnelFurniture."@en .
-
-tun:TunnelInstallation.adeOfTunnelInstallation a owl:ObjectProperty ;
-    rdfs:label "adeOfTunnelInstallation"@en ;
-    rdfs:domain tun:TunnelInstallation ;
-    rdfs:range tun:ADEOfTunnelInstallation ;
-    skos:definition "Augments the TunnelInstallation with properties defined in an ADE."@en .
-
-tun:TunnelInstallation.function a owl:ObjectProperty ;
-    rdfs:label "function"@en ;
-    rdfs:domain tun:TunnelInstallation ;
-    rdfs:range owl:Class ;
-    skos:definition "Specifies the intended purposes of the TunnelInstallation."@en .
-
-tun:TunnelInstallation.usage a owl:ObjectProperty ;
-    rdfs:label "usage"@en ;
-    rdfs:domain tun:TunnelInstallation ;
-    rdfs:range owl:Class ;
-    skos:definition "Specifies the actual uses of the TunnelInstallation."@en .
-
-tun:TunnelPart.adeOfTunnelPart a owl:ObjectProperty ;
-    rdfs:label "adeOfTunnelPart"@en ;
-    rdfs:domain tun:TunnelPart ;
-    rdfs:range tun:ADEOfTunnelPart ;
-    skos:definition "Augments the TunnelPart with properties defined in an ADE."@en .
-
-tun:ADEOfAbstractTunnel a owl:Class ;
-    rdfs:label "ADEOfAbstractTunnel"@en ;
+brid:ADEOfAbstractBridge a owl:Class ;
+    rdfs:label "ADEOfAbstractBridge"@en ;
     iso19150-2:isAbstract true ;
-    skos:definition "ADEOfAbstractTunnel acts as a hook to define properties within an ADE that are to be added to AbstractTunnel."@en .
+    skos:definition "ADEOfAbstractBridge acts as a hook to define properties within an ADE that are to be added to AbstractBridge."@en .
 
-tun:ADEOfHollowSpace a owl:Class ;
-    rdfs:label "ADEOfHollowSpace"@en ;
+brid:ADEOfBridge a owl:Class ;
+    rdfs:label "ADEOfBridge"@en ;
     iso19150-2:isAbstract true ;
-    skos:definition "ADEOfHollowSpace acts as a hook to define properties within an ADE that are to be added to a HollowSpace."@en .
+    skos:definition "ADEOfBridge acts as a hook to define properties within an ADE that are to be added to a Bridge."@en .
 
-tun:ADEOfTunnel a owl:Class ;
-    rdfs:label "ADEOfTunnel"@en ;
+brid:ADEOfBridgeConstructiveElement a owl:Class ;
+    rdfs:label "ADEOfBridgeConstructiveElement"@en ;
     iso19150-2:isAbstract true ;
-    skos:definition "ADEOfTunnel acts as a hook to define properties within an ADE that are to be added to a Tunnel."@en .
+    skos:definition "ADEOfBridgeConstructiveElement acts as a hook to define properties within an ADE that are to be added to a BridgeConstructiveElement."@en .
 
-tun:ADEOfTunnelConstructiveElement a owl:Class ;
-    rdfs:label "ADEOfTunnelConstructiveElement"@en ;
+brid:ADEOfBridgeFurniture a owl:Class ;
+    rdfs:label "ADEOfBridgeFurniture"@en ;
     iso19150-2:isAbstract true ;
-    skos:definition "ADEOfTunnelConstructiveElement acts as a hook to define properties within an ADE that are to be added to a TunnelConstructiveElement."@en .
+    skos:definition "ADEOfBridgeFurniture acts as a hook to define properties within an ADE that are to be added to a BridgeFurniture."@en .
 
-tun:ADEOfTunnelFurniture a owl:Class ;
-    rdfs:label "ADEOfTunnelFurniture"@en ;
+brid:ADEOfBridgeInstallation a owl:Class ;
+    rdfs:label "ADEOfBridgeInstallation"@en ;
     iso19150-2:isAbstract true ;
-    skos:definition "ADEOfTunnelFurniture acts as a hook to define properties within an ADE that are to be added to a TunnelFurniture."@en .
+    skos:definition "ADEOfBridgeInstallation acts as a hook to define properties within an ADE that are to be added to a BridgeInstallation."@en .
 
-tun:ADEOfTunnelInstallation a owl:Class ;
-    rdfs:label "ADEOfTunnelInstallation"@en ;
+brid:ADEOfBridgePart a owl:Class ;
+    rdfs:label "ADEOfBridgePart"@en ;
     iso19150-2:isAbstract true ;
-    skos:definition "ADEOfTunnelInstallation acts as a hook to define properties within an ADE that are to be added to a TunnelInstallation."@en .
+    skos:definition "ADEOfBridgePart acts as a hook to define properties within an ADE that are to be added to a BridgePart."@en .
 
-tun:ADEOfTunnelPart a owl:Class ;
-    rdfs:label "ADEOfTunnelPart"@en ;
+brid:ADEOfBridgeRoom a owl:Class ;
+    rdfs:label "ADEOfBridgeRoom"@en ;
     iso19150-2:isAbstract true ;
-    skos:definition "ADEOfTunnelPart acts as a hook to define properties within an ADE that are to be added to a TunnelPart."@en .
+    skos:definition "ADEOfBridgeRoom acts as a hook to define properties within an ADE that are to be added to a BridgeRoom."@en .
 
-tun:AbstractTunnel.class a owl:ObjectProperty ;
+brid:AbstractBridge.class a owl:ObjectProperty ;
     rdfs:label "class"@en ;
-    rdfs:domain tun:AbstractTunnel ;
+    rdfs:domain brid:AbstractBridge ;
     rdfs:range owl:Class ;
-    skos:definition "Indicates the specific type of the Tunnel or TunnelPart."@en .
+    skos:definition "Indicates the specific type of the Bridge or BridgePart."@en .
 
-tun:HollowSpace.class a owl:ObjectProperty ;
-    rdfs:label "class"@en ;
-    rdfs:domain tun:HollowSpace ;
-    rdfs:range owl:Class ;
-    skos:definition "Indicates the specific type of the HollowSpace."@en .
+brid:AbstractBridge.isMovable a owl:DatatypeProperty ;
+    rdfs:label "isMovable"@en ;
+    rdfs:domain brid:AbstractBridge ;
+    rdfs:range xsd:boolean ;
+    skos:definition "Indicates whether the Bridge or BridgePart can be moved to allow for watercraft to pass."@en .
 
-tun:Tunnel a owl:Class ;
-    rdfs:label "Tunnel"@en ;
+brid:Bridge a owl:Class ;
+    rdfs:label "Bridge"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom tun:ADEOfTunnel ;
-            owl:onProperty tun:Tunnel.adeOfTunnel ],
+            owl:allValuesFrom brid:ADEOfBridge ;
+            owl:onProperty brid:Bridge.adeOfBridge ],
         [ a owl:Restriction ;
-            owl:allValuesFrom tun:TunnelPart ;
-            owl:onProperty tun:Tunnel.tunnelPart ],
-        tun:AbstractTunnel ;
-    owl:disjointWith tun:TunnelPart ;
-    skos:definition "A Tunnel represents a horizontal or sloping enclosed passage way of a certain length, mainly underground or underwater. [cf. ISO 6707-1]"@en .
+            owl:allValuesFrom brid:BridgePart ;
+            owl:onProperty brid:Bridge.bridgePart ],
+        brid:AbstractBridge ;
+    owl:disjointWith brid:BridgePart ;
+    skos:definition "A Bridge represents a structure that affords the passage of pedestrians, animals, vehicles, and service(s) above obstacles or between two points at a height above ground. [cf. ISO 6707-1]"@en .
 
-tun:TunnelConstructiveElement.class a owl:ObjectProperty ;
+brid:BridgeConstructiveElement.class a owl:ObjectProperty ;
     rdfs:label "class"@en ;
-    rdfs:domain tun:TunnelConstructiveElement ;
+    rdfs:domain brid:BridgeConstructiveElement ;
     rdfs:range owl:Class ;
-    skos:definition "Indicates the specific type of the TunnelConstructiveElement."@en .
+    skos:definition "Indicates the specific type of the BridgeConstructiveElement."@en .
 
-tun:TunnelFurniture.class a owl:ObjectProperty ;
+brid:BridgeFurniture.class a owl:ObjectProperty ;
     rdfs:label "class"@en ;
-    rdfs:domain tun:TunnelFurniture ;
+    rdfs:domain brid:BridgeFurniture ;
     rdfs:range owl:Class ;
-    skos:definition "Indicates the specific type of the TunnelFurniture."@en .
+    skos:definition "Indicates the specific type of the BridgeFurniture."@en .
 
-tun:TunnelInstallation.class a owl:ObjectProperty ;
+brid:BridgeInstallation.class a owl:ObjectProperty ;
     rdfs:label "class"@en ;
-    rdfs:domain tun:TunnelInstallation ;
+    rdfs:domain brid:BridgeInstallation ;
     rdfs:range owl:Class ;
-    skos:definition "Indicates the specific type of the TunnelInstallation."@en .
+    skos:definition "Indicates the specific type of the BridgeInstallation."@en .
 
-tun:TunnelPart a owl:Class ;
-    rdfs:label "TunnelPart"@en ;
+brid:BridgeRoom.class a owl:ObjectProperty ;
+    rdfs:label "class"@en ;
+    rdfs:domain brid:BridgeRoom ;
+    rdfs:range owl:Class ;
+    skos:definition "Indicates the specific type of the BridgeRoom."@en .
+
+brid:BridgePart a owl:Class ;
+    rdfs:label "BridgePart"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom tun:ADEOfTunnelPart ;
-            owl:onProperty tun:TunnelPart.adeOfTunnelPart ],
-        tun:AbstractTunnel ;
-    skos:definition "A TunnelPart is a physical or functional subdivision of a Tunnel. It would be considered a Tunnel, if it were not part of a collection of other TunnelParts."@en .
+            owl:allValuesFrom brid:ADEOfBridgePart ;
+            owl:onProperty brid:BridgePart.adeOfBridgePart ],
+        brid:AbstractBridge ;
+    skos:definition "A BridgePart is a physical or functional subdivision of a Bridge. It would be considered a Bridge, if it were not part of a collection of other BridgeParts."@en .
 
-tun:TunnelConstructiveElement a owl:Class ;
-    rdfs:label "TunnelConstructiveElement"@en ;
+brid:BridgeConstructiveElement a owl:Class ;
+    rdfs:label "BridgeConstructiveElement"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:TunnelConstructiveElement.function ],
+            owl:allValuesFrom brid:ADEOfBridgeConstructiveElement ;
+            owl:onProperty brid:BridgeConstructiveElement.adeOfBridgeConstructiveElement ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:TunnelConstructiveElement.class ],
+            owl:onProperty brid:BridgeConstructiveElement.usage ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Class ;
+            owl:onProperty brid:BridgeConstructiveElement.function ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Class ;
+            owl:onProperty brid:BridgeConstructiveElement.class ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass owl:Class ;
-            owl:onProperty tun:TunnelConstructiveElement.class ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom tun:ADEOfTunnelConstructiveElement ;
-            owl:onProperty tun:TunnelConstructiveElement.adeOfTunnelConstructiveElement ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:TunnelConstructiveElement.usage ],
+            owl:onProperty brid:BridgeConstructiveElement.class ],
         con:AbstractConstructiveElement ;
-    skos:definition "A TunnelConstructiveElement is an element of a Tunnel which is essential from a structural point of view. Examples are walls, slabs, beams."@en .
+    skos:definition "A BridgeConstructiveElement is an element of a bridge which is essential from a structural point of view. Examples are pylons, anchorages, slabs, beams."@en .
 
-tun:TunnelFurniture a owl:Class ;
-    rdfs:label "TunnelFurniture"@en ;
+brid:BridgeFurniture a owl:Class ;
+    rdfs:label "BridgeFurniture"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom tun:ADEOfTunnelFurniture ;
-            owl:onProperty tun:TunnelFurniture.adeOfTunnelFurniture ],
+            owl:allValuesFrom brid:ADEOfBridgeFurniture ;
+            owl:onProperty brid:BridgeFurniture.adeOfBridgeFurniture ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:TunnelFurniture.usage ],
+            owl:onProperty brid:BridgeFurniture.usage ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:TunnelFurniture.function ],
+            owl:onProperty brid:BridgeFurniture.function ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:TunnelFurniture.class ],
+            owl:onProperty brid:BridgeFurniture.class ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass owl:Class ;
-            owl:onProperty tun:TunnelFurniture.class ],
+            owl:onProperty brid:BridgeFurniture.class ],
         con:AbstractFurniture ;
-    skos:definition "A TunnelFurniture is an equipment for occupant use, usually not fixed to the tunnel. [cf. ISO 6707-1]"@en .
+    skos:definition "A BridgeFurniture is an equipment for occupant use, usually not fixed to the bridge. [cf. ISO 6707-1]"@en .
 
-tun:TunnelInstallation a owl:Class ;
-    rdfs:label "TunnelInstallation"@en ;
+brid:BridgeInstallation a owl:Class ;
+    rdfs:label "BridgeInstallation"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom tun:ADEOfTunnelInstallation ;
-            owl:onProperty tun:TunnelInstallation.adeOfTunnelInstallation ],
+            owl:allValuesFrom brid:ADEOfBridgeInstallation ;
+            owl:onProperty brid:BridgeInstallation.adeOfBridgeInstallation ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:TunnelInstallation.usage ],
+            owl:onProperty brid:BridgeInstallation.usage ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:TunnelInstallation.function ],
+            owl:onProperty brid:BridgeInstallation.function ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:TunnelInstallation.class ],
+            owl:onProperty brid:BridgeInstallation.class ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass owl:Class ;
-            owl:onProperty tun:TunnelInstallation.class ],
+            owl:onProperty brid:BridgeInstallation.class ],
         con:AbstractInstallation ;
-    skos:definition "A TunnelInstallation is a permanent part of a Tunnel (inside and/or outside) which does not have the significance of a TunnelPart. In contrast to TunnelConstructiveElement, a TunnelInstallation is not essential from a structural point of view. Examples are stairs, antennas or railings."@en .
+    skos:definition "A BridgeInstallation is a permanent part of a Bridge (inside and/or outside) which does not have the significance of a BridgePart. In contrast to BridgeConstructiveElements, a BridgeInstallation is not essential from a structural point of view. Examples are stairs, antennas or railways."@en .
 
-tun:HollowSpace a owl:Class ;
-    rdfs:label "HollowSpace"@en ;
+brid:BridgeRoom a owl:Class ;
+    rdfs:label "BridgeRoom"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom brid:BridgeFurniture ;
+            owl:onProperty brid:BridgeRoom.bridgeFurniture ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Class ;
+            owl:onProperty brid:BridgeRoom.class ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom brid:BridgeInstallation ;
+            owl:onProperty brid:BridgeRoom.bridgeInstallation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom brid:ADEOfBridgeRoom ;
+            owl:onProperty brid:BridgeRoom.adeOfBridgeRoom ],
+        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass owl:Class ;
-            owl:onProperty tun:HollowSpace.class ],
+            owl:onProperty brid:BridgeRoom.class ],
         [ a owl:Restriction ;
-            owl:allValuesFrom tun:ADEOfHollowSpace ;
-            owl:onProperty tun:HollowSpace.adeOfHollowSpace ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom tun:TunnelInstallation ;
-            owl:onProperty tun:HollowSpace.tunnelInstallation ],
+            owl:allValuesFrom owl:Class ;
+            owl:onProperty brid:BridgeRoom.usage ],
         [ a owl:Restriction ;
             owl:allValuesFrom core:AbstractThematicSurface ;
-            owl:onProperty tun:HollowSpace.boundary ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom tun:TunnelFurniture ;
-            owl:onProperty tun:HollowSpace.tunnelFurniture ],
+            owl:onProperty brid:BridgeRoom.boundary ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:HollowSpace.usage ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:HollowSpace.class ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:HollowSpace.function ],
+            owl:onProperty brid:BridgeRoom.function ],
         core:AbstractUnoccupiedSpace ;
-    skos:definition "A HollowSpace is a space within a Tunnel or TunnelPart intended for certain functions (e.g. transport or passage ways, service rooms, emergency shelters). A HollowSpace is bounded physically and/or virtually (e.g. by ClosureSurfaces or GenericSurfaces)."@en .
+    skos:definition "A BridgeRoom is a space within a Bridge or BridgePart intended for human occupancy (e.g. a place of work or recreation) and/or containment (storage) of animals or things. A BridgeRoom is bounded physically and/or virtually (e.g. by ClosureSurfaces or GenericSurfaces)."@en .
 
-tun:AbstractTunnel a owl:Class ;
-    rdfs:label "AbstractTunnel"@en ;
+brid:AbstractBridge a owl:Class ;
+    rdfs:label "AbstractBridge"@en ;
     iso19150-2:isAbstract true ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom tun:HollowSpace ;
-            owl:onProperty tun:AbstractTunnel.hollowSpace ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:AbstractTunnel.function ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:AbstractTunnel.class ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom tun:ADEOfAbstractTunnel ;
-            owl:onProperty tun:AbstractTunnel.adeOfAbstractTunnel ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom tun:TunnelConstructiveElement ;
-            owl:onProperty tun:AbstractTunnel.tunnelConstructiveElement ],
+            owl:onProperty brid:AbstractBridge.class ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass owl:Class ;
-            owl:onProperty tun:AbstractTunnel.class ],
+            owl:onProperty brid:AbstractBridge.class ],
         [ a owl:Restriction ;
-            owl:allValuesFrom tun:TunnelInstallation ;
-            owl:onProperty tun:AbstractTunnel.tunnelInstallation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom tun:TunnelFurniture ;
-            owl:onProperty tun:AbstractTunnel.tunnelFurniture ],
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty brid:AbstractBridge.isMovable ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl:Class ;
-            owl:onProperty tun:AbstractTunnel.usage ],
+            owl:onProperty brid:AbstractBridge.function ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty brid:AbstractBridge.isMovable ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Class ;
+            owl:onProperty brid:AbstractBridge.usage ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom brid:BridgeFurniture ;
+            owl:onProperty brid:AbstractBridge.bridgeFurniture ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom core:Address ;
+            owl:onProperty brid:AbstractBridge.address ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom brid:ADEOfAbstractBridge ;
+            owl:onProperty brid:AbstractBridge.adeOfAbstractBridge ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom brid:BridgeInstallation ;
+            owl:onProperty brid:AbstractBridge.bridgeInstallation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom brid:BridgeRoom ;
+            owl:onProperty brid:AbstractBridge.bridgeRoom ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom brid:BridgeConstructiveElement ;
+            owl:onProperty brid:AbstractBridge.bridgeConstructiveElement ],
         con:AbstractConstruction ;
-    skos:definition "AbstractTunnel is an abstract superclass representing the common attributes and associations of the classes Tunnel and TunnelPart."@en .
+    skos:definition "AbstractBridge is an abstract superclass representing the common attributes and associations of the classes Bridge and BridgePart."@en .
