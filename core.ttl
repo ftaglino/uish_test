@@ -31,7 +31,7 @@
     owl:imports 
         <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/shapechange.ttl>,
         <http://www.opengis.net/ont/gml>,
-        <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/building.ttl>;
+        <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/building.ttl>;
     skos:definition "The Core module defines the basic components of the CityGML conceptual model. This includes abstract base classes that define the core properties of more specialized thematic classes defined in other modules as well as concrete classes that are common to other modules, for example basic data types."@en .
 
 core:IntegerBetween0and3 a owl:Class ;
