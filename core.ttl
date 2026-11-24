@@ -34,7 +34,7 @@
     <Prefix name="iso19109" IRI="http://def.isotc211.org/iso19109/2015/GeneralFeatureModel#"/>
     <Prefix name="iso19150-2" IRI="http://def.isotc211.org/iso19150/-2/2012/base#"/>
     <Prefix name="iso19111-2019" IRI="http://def.isotc211.org/iso19111/2019/CoordinateReferenceSystems#"/>
-    <Import>http://def.isotc211.org/iso19150/-2/2012/base</Import>
+<!--    <Import>http://def.isotc211.org/iso19150/-2/2012/base</Import> -->
     <Import>http://shapechange.net/resources/ont/base</Import>
     <Import>http://www.opengis.net/ont/gml</Import>
 <!--    <Import>https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/appearance</Import> -->
