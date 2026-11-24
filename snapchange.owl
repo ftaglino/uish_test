@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 <!-- @prefix iso19150-2: <http://def.isotc211.org/iso19150-2/2012/base#> . -->
 
+<!-- <http://shapechange.net/resources/ont/base> -->
 <http://shapechange.net/resources/ont/base>
   a owl:Ontology ;
   rdfs:comment "Types and properties used in application schemas."@en ;
