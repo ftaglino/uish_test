@@ -10,7 +10,7 @@
 <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/bridge> a owl:Ontology ;
     rdfs:label "Bridge"@en ;
     owl:imports <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/construction.ttl>,
-        <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/core.ttl> .
+        <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/core.ttl> ;
     skos:definition "The Bridge module supports representation of thematic and spatial aspects of bridges, bridge parts, bridge installations, and interior bridge structures."@en .
 
 brid:AbstractBridge.address a owl:ObjectProperty ;
