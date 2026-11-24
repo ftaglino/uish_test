@@ -14,7 +14,7 @@
 
 <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/construction> a owl:Ontology ;
     rdfs:label "Construction"@en ;
-    owl:imports <http://def.isotc211.org/iso19150/-2/2012/base>,
+    owl:imports 
         <http://shapechange.net/resources/ont/base>,
         <http://www.opengis.net/ont/gml>,
         <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/bridge.ttl>,
