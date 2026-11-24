@@ -35,12 +35,12 @@
     <Prefix name="iso19150-2" IRI="http://def.isotc211.org/iso19150/-2/2012/base#"/>
     <Prefix name="iso19111-2019" IRI="http://def.isotc211.org/iso19111/2019/CoordinateReferenceSystems#"/>
 <!--    <Import>http://def.isotc211.org/iso19150/-2/2012/base</Import> -->
-    <Import>https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/snapchange.owl</Import>
+<!-- ***    <Import>https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/snapchange.owl</Import> -->
 <!--    <Import>http://shapechange.net/resources/ont/base</Import> -->
-    <Import>http://www.opengis.net/ont/gml</Import>
+<!-- ***    <Import>http://www.opengis.net/ont/gml</Import> -->
 <!--    <Import>https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/appearance</Import> -->
 <!--    <Import>https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/bridge</Import> -->
-        <Import>https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/building.ttl</Import> 
+<!-- ***        <Import>https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/building.ttl</Import> -->
 <!--    <Import>https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/building</Import> -->
 <!--    <Import>https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/cityfurniture</Import> -->
 <!--    <Import>https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/cityobjectgroup</Import> -->
