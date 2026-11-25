@@ -26,7 +26,7 @@
 @prefix wtr: <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/waterbody#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core> a owl:Ontology ;
+<https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/core> a owl:Ontology ;
     rdfs:label "Core"@en ;
     owl:imports 
         <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/shapechange.ttl>,
