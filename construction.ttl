@@ -12,7 +12,7 @@
 @prefix tun: <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/tunnel#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/construction> a owl:Ontology ;
+<https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/construction> a owl:Ontology ;
     rdfs:label "Construction"@en ;
     owl:imports 
         <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/shapechange.ttl>,
