@@ -7,7 +7,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/bridge> a owl:Ontology ;
+<https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/bridge> a owl:Ontology ;
     rdfs:label "Bridge"@en ;
     owl:imports <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/construction.ttl>,
         <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/core.ttl> ;
