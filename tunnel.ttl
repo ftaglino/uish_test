@@ -1,10 +1,10 @@
-@prefix con: <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/construction#> .
-@prefix core: <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/core#> .
+@prefix con: <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/construction#> .
+@prefix core: <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/core#> .
 @prefix iso19150-2: <http://def.isotc211.org/iso19150/-2/2012/base#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tun: <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/tunnel#> .
+@prefix tun: <https://raw.githubusercontent.com/ftaglino/uish_test/refs/heads/main/tunnel#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://dataset-dl.liris.cnrs.fr/rdf-owl-urban-data-ontologies/Ontologies/CityGML/3.0/tunnel> a owl:Ontology ;
